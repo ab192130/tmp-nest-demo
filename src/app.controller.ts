@@ -7,11 +7,11 @@ export class AppController {
 
   @Get()
   getHello(@Res() res): string {
-    return res.status(HttpStatus).send(this.appService.getHello());
+    return res.status(HttpStatus.OK).send(this.appService.getHello());
   }
 
   @Post()
   postHello(@Res() res): string {
-    return res.status(HttpStatus).send(this.appService.postHello());
+    return res.status(HttpStatus.OK).send(this.appService.postHello());
   }
 }
